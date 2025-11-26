@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & GEO (Generative Engine Optimization) Meta Tags -->
+    <title>Creomint | Future-Ready IT Solutions & AI Transformation</title>
+    <meta name="description" content="Creomint is a premier IT startup specializing in AI, Cloud Computing, and Digital Transformation. Partners with Netsaurs & LunarBerry. Minting ideas into digital reality.">
+    <meta name="keywords" content="Creomint, IT Startup, AI Solutions, Web Development, Netsaurs, LunarBerry, Digital Transformation, Software Engineering">
+    <meta name="author" content="Creomint Inc.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Creomint - Minting the Future of Tech">
+    <meta property="og:description" content="Join the digital revolution with Creomint. High-performance IT solutions powered by innovation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.creomint.com">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0f172a/00ffcc?text=Creomint+Launch">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#050507',
+                            gray: '#121216',
+                            mint: '#00FFA3',
+                            cyan: '#00F0FF',
+                            purple: '#7000FF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'hero-glow': 'conic-gradient(from 90deg at 50% 50%, #000000 0%, #121216 50%, #000000 100%)',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles for Scrollbar & specialized animations -->
+    <style>
+        :root {
+            --cursor-size: 20px;
+        }
+        
+        body {
+            background-color: #050507;
+            color: white;
+            overflow-x: hidden;
+            cursor: none; /* Custom cursor implementation */
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050507; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00FFA3; 
+        }
+
+        /* Selection */
+        ::selection {
+            background: #00FFA3;
+            color: #000;
+        }
+
+        /* Custom Cursor */
+        #cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: var(--cursor-size);
+            height: var(--cursor-size);
+            border: 1px solid #00FFA3;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+            mix-blend-mode: difference;
+        }
+        #cursor-dot {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            background: #00FFA3;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Utility classes */
+        .glass-panel {
+            background: rgba(18, 18, 22, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #00FFA3, #00F0FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .text-gradient-purple {
+            background: linear-gradient(to right, #00F0FF, #7000FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Performance: content-visibility for off-screen content */
+        .defer-render {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 1000px;
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD for AEO (Answer Engine Optimization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Creomint",
+      "url": "https://www.creomint.com",
+      "logo": "https://www.creomint.com/logo.png",
+      "description": "Creomint is a next-generation IT startup providing AI, Cloud, and Web Solutions.",
+      "foundingDate": "2024",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Creomint Founders"
+        }
+      ],
+      "department": [
+        {
+          "@type": "Organization",
+          "name": "Netsaurs Partnership",
+          "description": "Strategic tie-up for cybersecurity and infrastructure."
+        },
+        {
+          "@type": "Organization",
+          "name": "LunarBerry Partnership",
+          "description": "Collaboration for creative design and branding."
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-0199",
+        "contactType": "Customer Service"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/creomint",
+        "https://twitter.com/creomint"
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- Custom Cursor Elements -->
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center glass-panel mt-4 rounded-full mx-4">
+            <a href="#" class="text-2xl font-display font-bold tracking-tighter text-white">
+                CREO<span class="text-brand-mint">MINT</span>.
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="text-sm text-gray-300 hover:text-brand-mint transition-colors relative group">
+                    Services
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-mint transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#about" class="text-sm text-gray-300 hover:text-brand-mint transition-colors relative group">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-mint transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#partners" class="text-sm text-gray-300 hover:text-brand-mint transition-colors relative group">
+                    Partners
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-mint transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <a href="#contact" class="hidden md:inline-block px-6 py-2 border border-brand-mint text-brand-mint rounded-full hover:bg-brand-mint hover:text-black transition-all duration-300 text-sm font-semibold tracking-wide">
+                LET'S TALK
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <!-- Canvas Background -->
+        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
+        
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent z-10 pointer-events-none"></div>
+
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full border border-gray-800 bg-gray-900/50 backdrop-blur-md animate-float">
+                <span class="text-xs font-mono text-brand-cyan">🚀 NEXT-GEN STARTUP ECOSYSTEM</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-tight mb-6 gs-reveal">
+                Minting Ideas into <br>
+                <span class="text-gradient">Digital Reality</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed gs-reveal">
+                We are Creomint. We blend creative chaos with engineering precision to build software that defines the future.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center gs-reveal">
+                <a href="#contact" class="px-8 py-4 bg-brand-mint text-black font-bold rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,255,163,0.4)]">
+                    Start a Project
+                </a>
+                <a href="#services" class="px-8 py-4 border border-gray-700 text-white rounded-full hover:border-brand-mint hover:text-brand-mint transition-colors backdrop-blur-sm">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-20 opacity-70">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Scroll</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-brand-mint to-transparent"></div>
+        </div>
+    </header>
+
+    <!-- Partners / Tie-ups Marquee -->
+    <section class="py-10 border-y border-white/5 bg-brand-gray/50 relative overflow-hidden" id="partners">
+        <div class="absolute inset-0 pointer-events-none bg-gradient-to-r from-brand-dark via-transparent to-brand-dark z-10"></div>
+        <div class="flex space-x-16 items-center whitespace-nowrap animate-marquee" id="marquee-content">
+            <!-- Content injected via JS for infinite loop -->
+        </div>
+    </section>
+
+    <main>
+        <!-- About Section (AEO optimized text) -->
+        <section id="about" class="py-24 md:py-32 relative defer-render">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-brand-purple to-brand-cyan opacity-20 blur-2xl rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" alt="Creomint Innovation Hub" class="relative rounded-2xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover h-[500px]" loading="lazy">
+                </div>
+                
+                <div class="gs-section-text">
+                    <h2 class="text-brand-mint font-mono text-sm mb-4 tracking-wider">/// WHO WE ARE</h2>
+                    <h3 class="text-4xl md:text-5xl font-display font-bold mb-6 text-white">
+                        Not Just Another <span class="text-gradient-purple">IT Company</span>.
+                    </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Creomint was born from a simple idea: technology shouldn't just function; it should captivate. We are an Answer Engine Optimized (AEO) first company, ensuring your digital presence is ready for the AI era.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        With strategic technological tie-ups with industry giants like <strong>Netsaurs</strong> and <strong>LunarBerry</strong>, we leverage shared infrastructure and creative assets to deliver enterprise-grade solutions at startup agility.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <span class="w-2 h-2 bg-brand-mint rounded-full mr-3 shadow-[0_0_10px_#00FFA3]"></span>
+                            Generative Engine Optimization (GEO) Experts
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <span class="w-2 h-2 bg-brand-cyan rounded-full mr-3 shadow-[0_0_10px_#00F0FF]"></span>
+                            Award-winning UI/UX Design
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <span class="w-2 h-2 bg-brand-purple rounded-full mr-3 shadow-[0_0_10px_#7000FF]"></span>
+                            Scalable Cloud Architecture
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services (Bento Grid Style) -->
+        <section id="services" class="py-24 bg-brand-gray/30 defer-render">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-brand-cyan font-mono text-sm mb-4 tracking-wider">/// OUR EXPERTISE</h2>
+                    <h3 class="text-4xl md:text-6xl font-display font-bold text-white">
+                        Digital <span class="text-white">Alchemy</span>
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div class="glass-panel p-8 rounded-3xl hover:border-brand-mint/50 transition-all duration-500 group relative overflow-hidden md:col-span-2">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-mint/10 rounded-full blur-3xl -mr-16 -mt-16 transition-all group-hover:bg-brand-mint/20"></div>
+                        <h4 class="text-2xl font-bold text-white mb-2">Web & Mobile Engineering</h4>
+                        <p class="text-gray-400 mb-6 max-w-md">Performance-first PWA, React Native, and native iOS/Android development. We build apps that feel instant.</p>
+                        <div class="flex gap-2">
+                            <span class="px-3 py-1 rounded-full border border-white/10 text-xs text-gray-300">React</span>
+                            <span class="px-3 py-1 rounded-full border border-white/10 text-xs text-gray-300">Node.js</span>
+                            <span class="px-3 py-1 rounded-full border border-white/10 text-xs text-gray-300">Flutter</span>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-panel p-8 rounded-3xl hover:border-brand-purple/50 transition-all duration-500 group relative overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-purple to-transparent"></div>
+                        <h4 class="text-2xl font-bold text-white mb-2">AI & ML Solutions</h4>
+                        <p class="text-gray-400 mb-4 text-sm">LLM integration, predictive analytics, and custom chatbots.</p>
+                        <svg class="w-10 h-10 text-brand-purple mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-panel p-8 rounded-3xl hover:border-brand-cyan/50 transition-all duration-500 group relative overflow-hidden">
+                         <div class="absolute top-0 right-0 w-20 h-20 bg-brand-cyan/20 rounded-full blur-xl group-hover:scale-150 transition-transform"></div>
+                        <h4 class="text-2xl font-bold text-white mb-2">SEO, GEO & AEO</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Dominate Google and ChatGPT results with our structured data strategies.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-panel p-8 rounded-3xl hover:border-brand-mint/50 transition-all duration-500 group relative overflow-hidden md:col-span-2">
+                        <h4 class="text-2xl font-bold text-white mb-2">Blockchain & Web3</h4>
+                        <p class="text-gray-400 mb-6 max-w-md">Smart contracts, dApps, and secure decentralized systems tailored for high-trust environments.</p>
+                        <div class="flex gap-2">
+                            <span class="px-3 py-1 rounded-full border border-white/10 text-xs text-gray-300">Solidity</span>
+                            <span class="px-3 py-1 rounded-full border border-white/10 text-xs text-gray-300">Rust</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats / Impact -->
+        <section class="py-20 border-y border-white/5 bg-brand-dark">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="gs-stat">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-white mb-2">95+</div>
+                    <div class="text-gray-500 text-sm tracking-widest uppercase">Performance Score</div>
+                </div>
+                <div class="gs-stat">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-brand-mint mb-2">50+</div>
+                    <div class="text-gray-500 text-sm tracking-widest uppercase">Projects Minted</div>
+                </div>
+                <div class="gs-stat">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-brand-cyan mb-2">24/7</div>
+                    <div class="text-gray-500 text-sm tracking-widest uppercase">Support System</div>
+                </div>
+                <div class="gs-stat">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-brand-purple mb-2">3</div>
+                    <div class="text-gray-500 text-sm tracking-widest uppercase">Global Partners</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-brand-purple/20 rounded-full blur-[100px]"></div>
+                <div class="absolute top-1/4 right-0 w-64 h-64 bg-brand-mint/10 rounded-full blur-[80px]"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl md:text-7xl font-display font-bold text-white mb-6">Let's <span class="text-gradient">Mint</span> It.</h2>
+                    <p class="text-xl text-gray-400">Ready to build something that hasn't been done before?</p>
+                </div>
+
+                <form class="glass-panel p-8 md:p-12 rounded-3xl space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs text-gray-500 uppercase tracking-widest ml-2">Your Name</label>
+                            <input type="text" class="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-mint transition-colors" placeholder="John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs text-gray-500 uppercase tracking-widest ml-2">Your Email</label>
+                            <input type="email" class="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-mint transition-colors" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs text-gray-500 uppercase tracking-widest ml-2">Project Idea</label>
+                        <textarea rows="4" class="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-mint transition-colors" placeholder="Tell us about your vision..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-white text-black font-bold text-lg rounded-xl hover:bg-brand-mint transition-colors duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/5 bg-black py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-2xl font-display font-bold tracking-tighter text-white">
+                CREO<span class="text-brand-mint">MINT</span>.
+            </div>
+            <div class="text-gray-500 text-sm text-center md:text-right">
+                <p>&copy; 2024 Creomint Inc. All Rights Reserved.</p>
+                <p class="mt-2 text-xs">
+                    Partners: <span class="text-gray-300">Netsaurs</span> &bull; <span class="text-gray-300">LunarBerry</span>
+                </p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-500 hover:text-brand-mint transition-colors"><span class="sr-only">Twitter</span><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
+                <a href="#" class="text-gray-500 hover:text-brand-mint transition-colors"><span class="sr-only">LinkedIn</span><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // --- 1. Canvas Animation (Hero Background) ---
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+        
+        // Resize logic
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            initParticles();
+        }
+        window.addEventListener('resize', resize);
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2;
+                this.color = Math.random() > 0.8 ? '#00FFA3' : '#334155'; // Mint or Slate
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const particleCount = Math.min(width * 0.05, 100); // Responsive count
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Draw connections
+            particles.forEach((p, index) => {
+                p.update();
+                p.draw();
+                
+                // Connect particles if close
+                for (let j = index + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < 100) {
+                        ctx.strokeStyle = `rgba(0, 255, 163, ${0.1 - dist/1000})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            });
+            requestAnimationFrame(animateCanvas);
+        }
+
+        resize();
+        animateCanvas();
+
+        // --- 2. Custom Cursor Logic ---
+        const cursor = document.getElementById('cursor');
+        const cursorDot = document.getElementById('cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            const { clientX: x, clientY: y } = e;
+            
+            // Direct movement for dot
+            cursorDot.style.left = x + 'px';
+            cursorDot.style.top = y + 'px';
+            
+            // Laggy movement for circle
+            cursor.animate({
+                left: `${x}px`,
+                top: `${y}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // Hover effects for cursor
+        const hoverElements = document.querySelectorAll('a, button, input, textarea');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
+                cursor.style.backgroundColor = 'rgba(0, 255, 163, 0.1)';
+                cursor.style.borderColor = 'transparent';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+                cursor.style.borderColor = '#00FFA3';
+            });
+        });
+
+        // --- 3. GSAP Animations ---
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Content Reveal
+        gsap.from(".gs-reveal", {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out",
+            delay: 0.5
+        });
+
+        // Section Text Reveal
+        const textSections = document.querySelectorAll('.gs-section-text');
+        textSections.forEach(section => {
+            gsap.from(section.children, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                },
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+        });
+
+        // Stats Counter Animation
+        const stats = document.querySelectorAll('.gs-stat div:first-child');
+        stats.forEach(stat => {
+            const rawVal = stat.innerText;
+            const endVal = parseInt(rawVal);
+            const suffix = rawVal.replace(/[0-9]/g, '');
+            
+            if (!isNaN(endVal)) {
+                gsap.from(stat, {
+                    scrollTrigger: {
+                        trigger: stat,
+                        start: "top 85%"
+                    },
+                    textContent: 0,
+                    duration: 2,
+                    ease: "power1.out",
+                    snap: { textContent: 1 },
+                    onUpdate: function() {
+                        this.targets()[0].innerHTML = Math.ceil(this.targets()[0].textContent) + suffix;
+                    }
+                });
+            }
+        });
+
+        // --- 4. Marquee Injection ---
+        const marqueeContent = document.getElementById('marquee-content');
+        const partners = [
+            "NETSAURS", "LUNARBERRY", "CREOMINT", "GOOGLE CLOUD", "AWS", "OPENAI", 
+            "NETSAURS", "LUNARBERRY", "CREOMINT", "GOOGLE CLOUD", "AWS", "OPENAI"
+        ];
+        
+        let marqueeHTML = '';
+        partners.forEach(p => {
+            // Highlighting specific partners
+            const colorClass = (p === 'NETSAURS' || p === 'LUNARBERRY') ? 'text-brand-mint font-bold' : 'text-gray-600 font-medium';
+            marqueeHTML += `
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl ${colorClass} font-display">${p}</span>
+                    <span class="w-2 h-2 rounded-full bg-gray-800"></span>
+                </div>
+            `;
+        });
+        marqueeContent.innerHTML = marqueeHTML;
+        
+        // Clone for infinite scroll
+        marqueeContent.innerHTML += marqueeHTML;
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('-translate-y-2');
+            } else {
+                nav.classList.remove('-translate-y-2');
+            }
+        });
+
+    </script>
+</body>
+</html>
